@@ -1,25 +1,36 @@
-# print("cadastro de senha")
-# print("_"*60)
+print("cadastro")
+print("_"*60)
 
-# senhaCad = input("Digite a senha: ")
-# senhaConf = input("Confirme a senha: ")
+emailCad = input('Cadastre o email: ')
+emailConf = input('Confirme o email: ')
+print("_"*60)
+senhaCad = input('Cadastre a senha: ')
+senhaConf = input('Confirme a senha: ')
+print("_"*60)
 
-# while senhaCad != senhaConf:
-#     senhaConf = input("senhas diferentes, digite novamente: ")
-# print("senha cadastrada")    
+while emailCad.lower() != emailConf.lower() or senhaCad != senhaConf:
+    print('Email ou senha diferente, digite novamente')
+    emailConf = input('Confirme o email: ')
+    senhaConf = input('Confirme a senha: ')
 
-# print("_"*60)
-# print('login')
+print("_"*60)
+print('Cadastro feito com sucesso!')   
+print("_"*60)
 
-# senhaDig = input("Digite a senha para logar: ")
+emailDig = input('Digite o email para logar: ')
+senhaDig = input('Digite a senha para logar: ')
 
-# if senhaDig == senhaCad:
-#     print("Desbloqueado!")
+if emailDig.lower() == emailCad.lower() and senhaDig == senhaCad:
+    print('Bem vindo.')
 
-# else:
-#     for numeroTent in range(2, 4):
-#         senhaDig = input(f"Senha errada, tentativa {numeroTent}, digite novamente: ")
-#         if senhaDig == senhaCad:
-#             print("Bem vindo")         
+else:
+    for numeroTent in range(1, 10):
+        print('Email ou senha diferente, digite novamente')
+        emailDig = input('Digite o email para logar: ')
+        senhaDig = input('Digite a senha para logar: ')
+        if emailDig.lower() == emailCad.lower() and senhaDig == senhaCad:
+            break
+    print('Bem vindo')       
+           )         
 #             break   
 #             print("Bloqueado!")
