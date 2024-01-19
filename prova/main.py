@@ -18,14 +18,6 @@ while True:
     opcao = int(input('Digite a opção desejada:\n'))
     if opcao not in [1,2,3,4,5]:
         print('Opção não identificada')
-        # while True:
-            # opcao = int(input('Digite a opção desejada:\n'))
-            # if opcao not in [1,2,3,4,5]:
-            #     continue
-            # else:
-            #     break
-            
-    # else:
     elif opcao == 1:
         adicionar_aluno()
     elif opcao == 2:
