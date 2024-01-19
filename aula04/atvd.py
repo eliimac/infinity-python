@@ -1,76 +1,42 @@
-    ####Leia os dados de um usuário - nome, sobrenome, idade, email - e imprima-os enumerando os mesmos.
+def calcular_media(notas):
+    media = sum(notas) / len(notas)
+    return media
+
+def verificar_situacao(media):
+    if media is None:
+        return "Nenhuma nota foi inserida"
+    elif media == 10:
+        return "Parabéns, sua média é 10"
+    elif media >= 7:
+        return "Aprovado"
+    else:
+        return "Reprovado"
 
 
+while True:
+    notas_str = input("Digite as notas, separadas por vírgula: ")
+    notas = [float(nota) for nota in notas_str.split(",")]
 
-# n = input('digite seu nome: ')
-# s = input('digite seu sobrenome: ')
-# i = input('Digite a sua idade: ')
-# e = input('Digite o seu email: ')
+    media = calcular_media(notas)
+    situacao = verificar_situacao(media)
 
-# dicionario = {}
+    print(f"Nota: {media:.2f}; Situação: {situacao}")
 
-# dicionario['nome'] = n
-# dicionario['sobrenome'] = s
-# dicionario['idade'] = i
-# dicionario['email'] = e
-
-# print(dicionario)
-
-
-
-# print(f'A menor nota é: {nMenor}')
-# print(f'A media é: {media}')
-# print(f"A maimor nota é {nMaior}")
-# print(f'As quatro notas foram: {nLis}')
-
-
-# bancoDeAlunos = [{}]
-# nome = input('Digite o nome do aluno: ')
-# for i in range(1, 5):
-#     nota = float(input('Digite a nota: '))
-#     # nLis.append(nota)
-
-# bancoDeAlunos ['Nome: '] = nome
-# # media = sum(nLis) /4
-# # saida['Notas'] = nLis
-# nLis.sort()
-# nMenor= nLis.pop(0)
-# bancoDeAlunos["Menor nota"] = nMenor
-# nMaior = nLis.pop(2)
-# bancoDeAlunos["Maior nota"] = nMaior
-
-# print(bancoDeAlunos)
-
-
-# dicionario = {
-
-#     "linguagem": "Python",
-
-#     "versao": 3.9,
-
-#     "autor": "Guido van Rossum"
-
-# }
-
-
-
-# print("modulo" in dicionario)
-
-numeros = [1, 2, 3, 4, 5]
-
-iterador = iter(numeros)
-# print(iterador)
-
-# dados = {
-
-#     "nome": "Maria",
-
-#     "idade": 25,
-
-#     "cidade": "São Paulo",
-
-#     "profissao": "Engenheira"
-
-# }
-
-# print(values.dados)
+    continuar = input("Deseja continuar? (S/N)").lower()
+    if continuar == 's':
+        continue
+    elif continuar == 'n':
+        print('Até logo.')
+        break
+    else:
+        print('caracter desconhecido.')
+        for i in range(1):
+            continuar = input("Deseja continuar? (S/N)").lower()
+            if continuar == 's':
+                continue
+            elif continuar == 'n':
+                print('Até logo.')
+                break
+            else:
+                print('Caracter desconhecido.')
+                break
